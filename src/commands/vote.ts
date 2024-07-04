@@ -42,7 +42,7 @@ export class VoteCommand extends NauticalCommand {
     private LINK_VOTE_TWO = "https://nauticalmc.xyz/vote2";
 
     private getVoteMessage(): string {
-        return `\n\n**${hyperlink("Link Vote 1", this.LINK_VOTE_ONE)}** | **${hyperlink("Link Vote 2", this.LINK_VOTE_TWO)}**\n${italic("atau gunakan tombol di bawah ini.")}\n\n— **REWARD**\nPastikan untuk online di server saat voting agar bisa mendapatkan reward.\n\n— **PENTING**\nKhusus untuk pemain Bedrock/MCPE, pastikan nickname atau username kamu harus diawali dengan titik (.) agar bisa vote. Contoh: ${inlineCode(".Velloist_")}`;
+        return `\n\n**${hyperlink("Link Vote 1", this.LINK_VOTE_ONE)}** | **${hyperlink("Link Vote 2", this.LINK_VOTE_TWO)}**\n${italic("atau gunakan tombol di bawah ini.")}\n\n— **REWARD**\nPastikan untuk online di server dan memiliki minimal tiga slot kosong di inventory untuk menerima reward.\n\n— **PENTING**\nKhusus untuk pemain Bedrock/MCPE, pastikan nickname atau username kamu harus diawali dengan titik (.) agar bisa vote. Contoh: ${inlineCode(".Velloist_")}`;
     }
 
     public async chatInputRun(interaction: NauticalCommand.ChatInputCommandInteraction) {

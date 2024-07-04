@@ -14,8 +14,8 @@
         "lint:unsafe": "biome check --write --unsafe ./src",
         "lint:check": "biome check ./src",
         "-- DOCKER": "-------------------------",
-        "docker:db:up": "docker-compose --file docker/db/docker-compose.yml up -d",
-        "docker:db:down": "docker-compose --file docker/db/docker-compose.yml down"
+        "prod:up": "docker-compose --file docker/docker-compose.yml up -d",
+        "prod:down": "docker-compose --file docker/docker-compose.yml down"
     },
     "devDependencies": {
         "@biomejs/biome": "^1.8.2",
