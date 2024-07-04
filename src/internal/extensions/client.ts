@@ -7,17 +7,17 @@ import {
 } from "@sapphire/framework";
 import type { ClientOptions } from "discord.js";
 
-export interface AletheiaClientOptions extends SapphireClientOptions, ClientOptions {
+export interface NauticalClientOptions extends SapphireClientOptions, ClientOptions {
     overrideApplicationCommandsRegistries?: boolean;
 }
 
-export class AletheiaClient extends SapphireClient {
-    public constructor(options: AletheiaClientOptions) {
+export class NauticalClient extends SapphireClient {
+    public constructor(options: NauticalClientOptions) {
         super(options);
 
         if (options.overrideApplicationCommandsRegistries) {
             container.logger.info(
-                "AletheiaClient: Default behavior for application commands registries are set to BulkOverwrite.",
+                "NauticalClient: Default behavior for application commands registries are set to BulkOverwrite.",
             );
 
             ApplicationCommandRegistries.setDefaultBehaviorWhenNotIdentical(RegisterBehavior.BulkOverwrite);

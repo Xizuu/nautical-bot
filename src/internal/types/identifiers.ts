@@ -5,7 +5,7 @@ enum Identifiers {
     DeveloperOnly = "DeveloperOnly",
 }
 
-export const AletheiaIdentifiers = {
+export const NauticalIdentifiers = {
     ...SapphireIdentifiers,
     ...Identifiers,
 } as const;

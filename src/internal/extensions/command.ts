@@ -1,7 +1,7 @@
 import type { ChatInputCommand } from "@sapphire/framework";
 import { Subcommand, type SubcommandOptions } from "@sapphire/plugin-subcommands";
 
-export abstract class AletheiaCommand extends Subcommand {
+export abstract class NauticalCommand extends Subcommand {
     protected constructor(context: Subcommand.LoaderContext, options: SubcommandOptions) {
         super(context, {
             ...options,
@@ -17,7 +17,7 @@ export abstract class AletheiaCommand extends Subcommand {
     }
 }
 
-export declare namespace AletheiaCommand {
+export declare namespace NauticalCommand {
     type Options = SubcommandOptions;
     type JSON = Subcommand.JSON;
     type Context = Subcommand.LoaderContext;

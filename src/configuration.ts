@@ -1,8 +1,8 @@
-import type { AletheiaClientOptions } from "@/internal/extensions/client";
+import type { NauticalClientOptions } from "@/internal/extensions/client";
 import { LogLevel } from "@sapphire/framework";
 import { ActivityType, GatewayIntentBits } from "discord.js";
 
-export const configuration: AletheiaClientOptions = {
+export const configuration: NauticalClientOptions = {
     overrideApplicationCommandsRegistries: true,
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
     loadMessageCommandListeners: true,
