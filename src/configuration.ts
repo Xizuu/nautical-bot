@@ -4,16 +4,16 @@ import { ActivityType, GatewayIntentBits } from "discord.js";
 
 export const configuration: NauticalClientOptions = {
     overrideApplicationCommandsRegistries: true,
-    intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
+    intents: [GatewayIntentBits.MessageContent, GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
     loadMessageCommandListeners: true,
     loadSubcommandErrorListeners: true,
     loadDefaultErrorListeners: true,
-    defaultPrefix: "aletheia.",
+    defaultPrefix: "n!",
     presence: {
         activities: [
             {
                 type: ActivityType.Playing,
-                name: "with reality, the manifested. ✨",
+                name: "play.nauticalmc.xyz",
             },
         ],
         status: "dnd",
