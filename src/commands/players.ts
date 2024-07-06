@@ -36,6 +36,7 @@ export class PlayersCommand extends NauticalCommand {
     public constructor(context: NauticalCommand.Context, options: NauticalCommand.Options) {
         super(context, {
             name: "players",
+            aliases: ["online"],
             description: "Memperlihatkan informasi tentang jumlah pemain online di server.",
             requiredClientPermissions: ["SendMessages"],
             preconditions: ["GuildOnly"],
