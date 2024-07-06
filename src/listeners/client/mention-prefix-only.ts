@@ -17,7 +17,7 @@ export class MentionPrefixOnlyListener extends Listener {
             embeds: [
                 new EmbedBuilder()
                     .setDescription(
-                        "Gunakan salah satu perintah berikut untuk melihat informasi lebih lanjut:\n\n— **n!ip**, ip server.\n— **n!vote**, link voting.\n— **n!claim**, tutorial claim tanah.",
+                        "Gunakan salah satu perintah berikut untuk melihat informasi lebih lanjut:\n\n— **n!ip**, ip server.\n— **n!vote**, link voting.\n— **n!claim**, tutorial claim tanah.\n— **n!player**, jumlah pemain online.",
                     )
                     .setFooter({
                         text: "Dibuat oleh @elizielx | NauticalCraft",
