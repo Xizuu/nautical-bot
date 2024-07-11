@@ -14,7 +14,7 @@ RUN apt-get -y update && \
 WORKDIR /app
 
 COPY package.json bun.lockb tsconfig.json ./
-RUN bun install --frozen-lockfile
+RUN bun install
 
 # Build the project
 FROM deps AS builder
