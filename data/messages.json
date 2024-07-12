@@ -4,10 +4,12 @@
         "java": "1.18-1.21.x"
     },
     "vote": {
-        "messageId": ""
+        "messageId": "",
+        "content": ""
     },
     "blacklist": {
-        "messageId": ""
+        "messageId": "",
+        "content": ""
     },
     "ip": {
         "content": "play.nauticalmc.xyz"

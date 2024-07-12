@@ -11,6 +11,7 @@ interface Ip {
 
 interface Vote {
     messageId: string;
+    content: string;
 }
 
 interface Version {
@@ -18,16 +19,18 @@ interface Version {
     java: string;
 }
 
-const defaultData = {
+const defaultData: DataConfig = {
     version: {
         bedrock: "1.20.80-1.21.0",
         java: "1.18-1.21.x",
     },
     vote: {
         messageId: "",
+        content: "",
     },
     blacklist: {
         messageId: "",
+        content: "",
     },
     ip: {
         content: "play.nauticalmc.xyz",
