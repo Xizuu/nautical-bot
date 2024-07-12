@@ -4,12 +4,12 @@
         "java": "1.18-1.21.x"
     },
     "vote": {
-        "messageId": "",
-        "content": ""
+        "messageId": "1261269637434445895",
+        "content": "[Link Vote 1](https://nauticalmc.xyz/vote1) | [Link Vote 2](https://nauticalmc.xyz/vote2)\n\n**— REWARD**\nPastikan untuk online di server dan memiliki minimal tiga slot kosong di inventory untuk menerima reward.\n\n**— PENTING**\nKhusus untuk pemain Bedrock/MCPE, pastikan nickname atau username kamu harus diawali dengan titik (.) agar bisa vote. Contoh: `.Velloist_`"
     },
     "blacklist": {
-        "messageId": "",
-        "content": ""
+        "messageId": "1261268871525171251",
+        "content": "# IP Blacklist\nBagi kalian yang IP nya ter-blacklist oleh server, kalian bisa lakukan cara ini:\nJika kalian menggunakan vpn, matikan vpn kalian terlebih dahulu\nBuka link https://www.notbot.es/ dan selesaikan captcha yang ada di website\nTunggu beberapa saat kemudian cobalah kembali bergabung ke server\n\nNote: spam join dapat menyebabkan ip ter-blacklist"
     },
     "ip": {
         "content": "play.nauticalmc.xyz"

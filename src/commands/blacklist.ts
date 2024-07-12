@@ -5,15 +5,14 @@ import { RegisterBehavior } from "@sapphire/framework";
 import { type Message, SlashCommandBuilder } from "discord.js";
 
 /**
- * Show information about the Minecraft server IP.
+ * Show information about IP Blacklist.
  * @version 1.0.0
  */
-export class IpCommand extends NauticalCommand {
+export class BlacklistCommand extends NauticalCommand {
     public constructor(context: NauticalCommand.Context, options: NauticalCommand.Options) {
         super(context, {
-            name: "ip",
-            aliases: ["server", "serverip"],
-            description: "Memperlihatkan informasi dan link IP server.",
+            name: "blacklist",
+            description: "Memperlihatkan informasi IP Blacklist",
             requiredClientPermissions: ["SendMessages"],
             preconditions: ["GuildOnly"],
             ...options,
@@ -34,7 +33,7 @@ export class IpCommand extends NauticalCommand {
         const config = await readMessages();
 
         interaction.reply({
-            embeds: [new EmbedBuilder().setDescription(config.ip.content)],
+            embeds: [new EmbedBuilder().setDescription(config.blacklist.content)],
         });
     }
 
@@ -42,7 +41,7 @@ export class IpCommand extends NauticalCommand {
         const config = await readMessages();
 
         message.reply({
-            embeds: [new EmbedBuilder().setDescription(config.ip.content)],
+            embeds: [new EmbedBuilder().setDescription(config.blacklist.content)],
         });
     }
 }

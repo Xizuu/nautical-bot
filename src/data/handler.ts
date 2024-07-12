@@ -69,7 +69,7 @@ export const updateVersion = async (bedrock: string, java: string) => {
     await Bun.write(Bun.file(Bun.pathToFileURL("data/messages.json")), JSON.stringify(config, null, 4));
 };
 
-export const updateVoteMessage = async (messageId: string) => {
+export const updateVoteMessage = async (messageId: string, content: string) => {
     const file = Bun.file(Bun.pathToFileURL("data/messages.json"));
 
     if (!(await file.exists())) {
@@ -82,13 +82,14 @@ export const updateVoteMessage = async (messageId: string) => {
         ...data,
         vote: {
             messageId,
+            content,
         },
     };
 
     await Bun.write(Bun.file(Bun.pathToFileURL("data/messages.json")), JSON.stringify(config, null, 4));
 };
 
-export const updateBlacklistMessage = async (messageId: string) => {
+export const updateBlacklistMessage = async (messageId: string, content: string) => {
     const file = Bun.file(Bun.pathToFileURL("data/messages.json"));
 
     if (!(await file.exists())) {
@@ -101,6 +102,7 @@ export const updateBlacklistMessage = async (messageId: string) => {
         ...data,
         blacklist: {
             messageId,
+            content,
         },
     };
 
