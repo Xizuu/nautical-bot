@@ -36,6 +36,7 @@ ENV NODE_ENV=production
 COPY --from=builder  /app/package.json .
 COPY --from=builder  /app/tsconfig.json .
 COPY --from=builder /app/src src
+COPY --from=builder /app/data data
 
 EXPOSE 3000
 
