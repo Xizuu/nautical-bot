@@ -2,7 +2,7 @@ import { readMessages } from "@/data/handler";
 import { NauticalCommand } from "@/internal/extensions/command";
 import { EmbedBuilder } from "@/internal/extensions/embed-builder";
 import { RegisterBehavior } from "@sapphire/framework";
-import { type Message, SlashCommandBuilder } from "discord.js";
+import { ActionRowBuilder, ButtonBuilder, ButtonStyle, type Message, SlashCommandBuilder } from "discord.js";
 
 /**
  * Show information about voting for the server and some other information.
@@ -38,10 +38,9 @@ export class VoteCommand extends NauticalCommand {
     // }
 
     public async chatInputRun(interaction: NauticalCommand.ChatInputCommandInteraction) {
-        // const voteButtons = new ActionRowBuilder<ButtonBuilder>().addComponents(
-        //     new ButtonBuilder().setStyle(ButtonStyle.Link).setLabel("Vote 1").setURL(this.LINK_VOTE_ONE),
-        //     new ButtonBuilder().setStyle(ButtonStyle.Link).setLabel("Vote 2").setURL(this.LINK_VOTE_TWO),
-        // );
+        const voteButtons = new ActionRowBuilder<ButtonBuilder>().addComponents(
+            new ButtonBuilder().setStyle(ButtonStyle.Link).setLabel("Vote 1").setURL("https://nauticalmc.xyz/vote"),
+        );
 
         // interaction.reply({
         //     embeds: [new EmbedBuilder().setDescription(this.getVoteMessage())],
@@ -52,6 +51,7 @@ export class VoteCommand extends NauticalCommand {
 
         interaction.reply({
             embeds: [new EmbedBuilder().setDescription(config.vote.content)],
+            components: [voteButtons],
         });
     }
 
@@ -60,6 +60,10 @@ export class VoteCommand extends NauticalCommand {
         //     new ButtonBuilder().setStyle(ButtonStyle.Link).setLabel("Vote 1").setURL(this.LINK_VOTE_ONE),
         //     new ButtonBuilder().setStyle(ButtonStyle.Link).setLabel("Vote 2").setURL(this.LINK_VOTE_TWO),
         // );
+
+        const voteButtons = new ActionRowBuilder<ButtonBuilder>().addComponents(
+            new ButtonBuilder().setStyle(ButtonStyle.Link).setLabel("Vote 1").setURL("https://nauticalmc.xyz/vote"),
+        );
 
         // message.reply({
         //     embeds: [new EmbedBuilder().setDescription(this.getVoteMessage())],
@@ -70,6 +74,7 @@ export class VoteCommand extends NauticalCommand {
 
         message.reply({
             embeds: [new EmbedBuilder().setDescription(config.vote.content)],
+            components: [voteButtons],
         });
     }
 }
